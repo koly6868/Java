@@ -1,6 +1,7 @@
-mkdir bin
+mkdir .\bin\lib
+
 javac -d  bin src/koly/summator/Summator.java
 
-jar cf bin/summator.jar bin/koly/summator/summator.class
+jar cvf bin/lib/summator.jar -C bin ./koly
 
-javac -d bin -cp bin src/Main.java
+javac -d bin -cp bin/lib/*jar src/Main.java
